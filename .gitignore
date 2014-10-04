@@ -1,3 +1,6 @@
+/spec/variables.rb
+/spec/fixtures/* 
+
 *.gem
 *.rbc
 /.config
