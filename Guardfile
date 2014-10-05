@@ -11,10 +11,12 @@
 #  * 'just' rspec: 'rspec'
 guard :rspec, cmd: 'bundle exec rspec' do
   watch(%r{^spec/.+_spec\.rb$})
+  watch(%r{^spec/lib/.+_spec\.rb$})
+  watch(%r{^spec/lib/rubytcc/.+_spec\.rb$})
+  watch(%r{^spec/lib/rubytcc/rest/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { "spec" }
   watch(%r{^lib/rubytcc/(.+)\.rb$})     { "spec" }
   watch(%r{^lib/rubytcc/rest/(.+)\.rb$})     { |m| "spec/lib/rubytcc/rest/#{m[1]}_spec.rb" }
-  watch(%r{^lib/rubytcc/rest/response/(.+)\.rb$})     { "spec" }
   watch('spec/spec_helper.rb')  { "spec" }
 end
 

@@ -1,7 +1,7 @@
 require 'rubytcc'
 require 'spec_helper'
 
-vcr_options = { :cassette_name => "GetLocations", :record => :new_episodes }
+vcr_options = { :cassette_name => "GetLocations", :record => :new_episodes, :re_record_interval => 5 * 60 }
 
 describe RubyTCC::REST::GetLocations do
 
