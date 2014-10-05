@@ -18,8 +18,28 @@ gem 'ruby-tcc', :git => 'https://github.com/auzroz/ruby-tcc'
 ```
 
 ## Usage
+First create a Client: 
+```ruby
+client = RubyTCC::REST::Client.new(:username => USERNAME, :password => PASSWORD)
+```
+Second, authenticate the login:
+```ruby
+client.authenticate_user_login
+```
+Next, calls can be made using the client object to availble APIs.
 
-## Supported APIs
+```ruby
+client.get_locations
+```
+
+Currently available API Calls
+## Currently Supported APIs
+* AuthenticateUserLogin
+* GetLocations
+* GetSchedule
+* GetVolatileThermostatData
+
+## Currently Unsupported APIs
 
 
 ## Contributing
