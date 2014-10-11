@@ -44,15 +44,14 @@ client.get_locations
 
 ## Contributing
 
-There are two sets of tests.
+Feel free to contribute, there are several options available that I don't have the ability to test with a home thermostat.
 
-The default one uses mock HTTP calls and can be run via:
+You need to update your login and thermostat credentials in spec/spec_helper.rb before running them:
+
 ```bash
-rake test:spec
+bundle exec rspec spec
 ```
-
-The remote ones will issue HTTP calls to the live API. You need to update your login and thermostat credentials in spec/spec_helper.rb before running them:
-
+- or -
 ```bash
-rake test:remote:spec
+bundle exec guard
 ```
