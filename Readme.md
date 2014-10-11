@@ -32,11 +32,11 @@ Next, calls can be made using the client object to availble APIs.
 client.get_locations
 ```
 
-Currently available API Calls
 ## Currently Supported APIs
 * AuthenticateUserLogin
 * GetLocations
 * GetSchedule
+* GetShortLocationInfo
 * GetVolatileThermostatData
 
 ## Currently Unsupported APIs
