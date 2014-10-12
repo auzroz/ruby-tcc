@@ -38,6 +38,7 @@ client.get_locations
 * ChangeThermostatFan
 * ChangeThermostatUI
 * CreateLocation
+* EditLocation
 * GetCommTaskState
 * GetLocations
 * GetSchedule

@@ -10,7 +10,7 @@ location_options = {
 						:city => "San Francisco",
 						:streetAddress => "1 Embarcadero",
 						:zipCode => "94133",
-						:notificationEmails => "example@example.com;",
+						:notificationEmails => "example@example.com",
 						:timeZone => "Pacific",
 						:useDaylightSavingTime => true
 				   }
@@ -29,8 +29,8 @@ describe RubyTCC::REST::CreateLocation, :vcr => vcr_options do
 		expect(subject.create_location( location_options )).to_not be_nil
 	end
 	
-	describe '.get_short_location_info' do
-		it 'should return a get short location info result', :vcr => vcr_options  do 
+	describe '.create_location' do
+		it 'should return a create location result', :vcr => vcr_options  do 
 			expect(subject.create_location( location_options )).to be_an_instance_of(RubyTCC::CreateLocationResult)
 		end
     end
