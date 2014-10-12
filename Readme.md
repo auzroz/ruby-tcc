@@ -37,6 +37,7 @@ client.get_locations
 * AuthenticateUserLogin
 * ChangeThermostatFan
 * ChangeThermostatUI
+* CreateLocation
 * GetCommTaskState
 * GetLocations
 * GetSchedule
@@ -50,6 +51,8 @@ client.get_locations
 * AcceptInvitation
 * CreateAccount
 * DeclineInvitation
+* GetPendingInvitations
+* ResendAccountActivationEmail
 
 
 ## Contributing
