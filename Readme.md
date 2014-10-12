@@ -34,6 +34,7 @@ client.get_locations
 
 ## Currently Supported APIs
 * AuthenticateUserLogin
+* ChangeThermostatFan
 * GetLocations
 * GetSchedule
 * GetShortLocationInfo
