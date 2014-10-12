@@ -41,9 +41,13 @@ client.get_locations
 * GetLocations
 * GetSchedule
 * GetShortLocationInfo
+* GetThermostatUI
 * GetVolatileThermostatData
 
 ## Currently Unsupported APIs
+* AcceptInvitation
+* CreateAccount
+* DeclineInvitation
 
 
 ## Contributing

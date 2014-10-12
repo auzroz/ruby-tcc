@@ -1,4 +1,3 @@
-require 'rubytcc/request'
 require 'rubytcc/change_thermostat_ui_result'
 
 module RubyTCC

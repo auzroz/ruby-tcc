@@ -1,4 +1,3 @@
-require 'rubytcc/request'
 require 'rubytcc/get_short_location_info_result'
 
 module RubyTCC

@@ -1,4 +1,3 @@
-require 'rubytcc/request'
 require 'rubytcc/change_request_result'
 
 module RubyTCC

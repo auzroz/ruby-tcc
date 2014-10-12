@@ -21,12 +21,5 @@ describe RubyTCC::REST::GetSchedule, :vcr => vcr_options do
 		it 'should return a get schdule result', :vcr => vcr_options  do 
 			expect(subject.get_schedule( { :thermostatID => THERMOSTAT_ID } )).to be_an_instance_of(RubyTCC::GetScheduleResult)
 		end
-
-	    context 'when valid credentials are provided' do
-	      it 'store a session_id', :vcr => vcr_options  do
-	        subject.authenticate_user_login
-	        expect(subject.session_id?).to be true
-	      end
-	    end
     end
 end

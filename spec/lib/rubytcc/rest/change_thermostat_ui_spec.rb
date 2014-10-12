@@ -38,12 +38,5 @@ describe RubyTCC::REST::ChangeThermostatUI, :vcr => vcr_options do
 		it 'should return a get volatile thermostat data result', :vcr => vcr_options  do 
 			expect(subject.change_thermostat_ui( thermostat_options )).to be_an_instance_of(RubyTCC::ChangeThermostatUIResult)
 		end
-
-	    context 'when valid credentials are provided' do
-	      it 'store a session_id', :vcr => vcr_options  do
-	        subject.authenticate_user_login
-	        expect(subject.session_id?).to be true
-	      end
-	    end
     end
 end

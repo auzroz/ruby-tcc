@@ -1,4 +1,3 @@
-require 'rubytcc/request'
 require 'rubytcc/get_schedule_result'
 
 module RubyTCC

@@ -14,12 +14,5 @@ describe RubyTCC::REST::AuthenticateUserLogin, :vcr => vcr_options do
 		it 'should return an authenticate user login result', :vcr => vcr_options  do 
 			expect(subject.authenticate_user_login).to be_an_instance_of(RubyTCC::AuthenticateLoginResult)
 		end
-
-	    context 'when valid credentials are provided' do
-	      it 'store a session_id', :vcr => vcr_options  do
-	        subject.authenticate_user_login
-	        expect(subject.session_id?).to be true
-	      end
-	    end
     end
 end

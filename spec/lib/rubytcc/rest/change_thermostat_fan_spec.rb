@@ -18,16 +18,9 @@ describe RubyTCC::REST::ChangeThermostatFan, :vcr => vcr_options do
 		expect(subject.change_thermostat_fan( thermostat_options )).to_not be_nil
 	end
 	
-	describe '.get_volatile_thermostat_data' do
+	describe '.change_thermostat_fan' do
 		it 'should return a get volatile thermostat data result', :vcr => vcr_options  do 
 			expect(subject.change_thermostat_fan( thermostat_options )).to be_an_instance_of(RubyTCC::ChangeRequestResult)
 		end
-
-	    context 'when valid credentials are provided' do
-	      it 'store a session_id', :vcr => vcr_options  do
-	        subject.authenticate_user_login
-	        expect(subject.session_id?).to be true
-	      end
-	    end
     end
 end

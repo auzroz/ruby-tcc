@@ -1,4 +1,3 @@
-require 'rubytcc/request'
 require 'rubytcc/get_comm_task_state_result'
 
 module RubyTCC

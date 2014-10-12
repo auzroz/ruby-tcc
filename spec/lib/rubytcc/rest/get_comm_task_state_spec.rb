@@ -18,16 +18,9 @@ describe RubyTCC::REST::GetCommTaskState, :vcr => vcr_options do
 		expect(subject.get_comm_task_state( { :commTaskID => subject.change_thermostat_fan( thermostat_options ).comm_task_id } )).to_not be_nil
 	end
 	
-	describe '.get_volatile_thermostat_data' do
+	describe '.get_comm_task_state' do
 		it 'should return a get volatile thermostat data result', :vcr => vcr_options  do 
 			expect(subject.get_comm_task_state( {:commTaskID => subject.change_thermostat_fan( thermostat_options ).comm_task_id } )).to be_an_instance_of(RubyTCC::GetCommTaskStateResult)
 		end
-
-	    context 'when valid credentials are provided' do
-	      it 'store a session_id', :vcr => vcr_options  do
-	        subject.authenticate_user_login
-	        expect(subject.session_id?).to be true
-	      end
-	    end
     end
 end

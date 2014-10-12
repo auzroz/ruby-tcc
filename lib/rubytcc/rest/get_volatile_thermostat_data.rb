@@ -1,4 +1,3 @@
-require 'rubytcc/request'
 require 'rubytcc/get_volatile_thermostat_data_result'
 
 module RubyTCC

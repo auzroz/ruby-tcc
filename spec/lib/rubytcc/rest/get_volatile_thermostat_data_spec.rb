@@ -21,12 +21,5 @@ describe RubyTCC::REST::GetVolatileThermostatData, :vcr => vcr_options do
 		it 'should return a get volatile thermostat data result', :vcr => vcr_options  do 
 			expect(subject.get_volatile_thermostat_data( { :thermostatID => THERMOSTAT_ID } )).to be_an_instance_of(RubyTCC::GetVolatileThermostatDataResult)
 		end
-
-	    context 'when valid credentials are provided' do
-	      it 'store a session_id', :vcr => vcr_options  do
-	        subject.authenticate_user_login
-	        expect(subject.session_id?).to be true
-	      end
-	    end
     end
 end
