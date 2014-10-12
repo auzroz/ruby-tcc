@@ -2,6 +2,7 @@ ruby-tcc
 ================
 
 Ruby client for the Honeywell Total Connect Comfort API.
+
 [![Code Climate](https://codeclimate.com/github/auzroz/ruby-tcc/badges/gpa.svg)](https://codeclimate.com/github/auzroz/ruby-tcc)
 ## Installation
 
@@ -35,6 +36,7 @@ client.get_locations
 ## Currently Supported APIs
 * AuthenticateUserLogin
 * ChangeThermostatFan
+* ChangeThermostatUI
 * GetCommTaskState
 * GetLocations
 * GetSchedule

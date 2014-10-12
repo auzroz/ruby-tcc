@@ -1,3 +1,5 @@
+require 'rubytcc/get_locations_result'
+
 module RubyTCC
 	module REST
 		module GetLocations

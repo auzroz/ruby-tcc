@@ -1,3 +1,5 @@
+require 'rubytcc/authenticate_login_result'
+
 module RubyTCC
 	module REST
 		module AuthenticateUserLogin
