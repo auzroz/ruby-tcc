@@ -43,6 +43,7 @@ client.get_locations
 * GetShortLocationInfo
 * GetThermostatUI
 * GetVolatileThermostatData
+* GetWeatherForecast
 * KeepAlive
 
 ## Currently Unsupported APIs

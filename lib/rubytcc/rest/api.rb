@@ -7,6 +7,7 @@ require 'rubytcc/rest/get_schedule'
 require 'rubytcc/rest/get_short_location_info'
 require 'rubytcc/rest/get_thermostat_ui'
 require 'rubytcc/rest/get_volatile_thermostat_data'
+require 'rubytcc/rest/get_weather_forecast'
 require 'rubytcc/rest/keep_alive'
 
 module RubyTCC
@@ -21,6 +22,7 @@ module RubyTCC
 			include RubyTCC::REST::GetShortLocationInfo
 			include RubyTCC::REST::GetThermostatUI
 			include RubyTCC::REST::GetVolatileThermostatData
+			include RubyTCC::REST::GetWeatherForecast
 			include RubyTCC::REST::KeepAlive
 		end
 	end
