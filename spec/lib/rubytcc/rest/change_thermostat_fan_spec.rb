@@ -8,7 +8,7 @@ describe RubyTCC::REST::ChangeThermostatFan, :vcr => vcr_options do
 	
 	subject {
 		VCR.use_cassette('AuthenticateUserLogin') do
-			client = RubyTCC::REST::Client.new(:username => USERNAME, :password => PASSWORD, :proxy => 'http://127.0.0.1:8080')
+			client = CLIENT
 			client.authenticate_user_login
 			client
 		end
@@ -19,7 +19,7 @@ describe RubyTCC::REST::ChangeThermostatFan, :vcr => vcr_options do
 	end
 	
 	describe '.change_thermostat_fan' do
-		it 'should return a get volatile thermostat data result', :vcr => vcr_options  do 
+		it 'should return a change thermostat fan result', :vcr => vcr_options  do 
 			expect(subject.change_thermostat_fan( thermostat_options )).to be_an_instance_of(RubyTCC::ChangeRequestResult)
 		end
     end

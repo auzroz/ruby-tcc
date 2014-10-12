@@ -43,6 +43,7 @@ client.get_locations
 * GetShortLocationInfo
 * GetThermostatUI
 * GetVolatileThermostatData
+* KeepAlive
 
 ## Currently Unsupported APIs
 * AcceptInvitation

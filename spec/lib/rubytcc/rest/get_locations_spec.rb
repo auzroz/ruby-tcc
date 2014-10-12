@@ -7,7 +7,7 @@ describe RubyTCC::REST::GetLocations do
 
 	subject {
 		VCR.use_cassette('AuthenticateUserLogin') do
-			client = RubyTCC::REST::Client.new(:username => USERNAME, :password => PASSWORD, :proxy => 'http://127.0.0.1:8080')
+			client = CLIENT
 			client.authenticate_user_login
 			client
 		end

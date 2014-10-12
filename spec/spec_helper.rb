@@ -13,3 +13,5 @@ RSpec.configure do |config|
 	config.tty = true
 	config.formatter = 'documentation'
 end
+
+CLIENT = RubyTCC::REST::Client.new(:username => USERNAME, :password => PASSWORD, :proxy => 'http://127.0.0.1:8080')

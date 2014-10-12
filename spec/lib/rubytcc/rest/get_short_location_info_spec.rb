@@ -7,7 +7,7 @@ describe RubyTCC::REST::GetShortLocationInfo, :vcr => vcr_options do
 	
 	subject {
 		VCR.use_cassette('AuthenticateUserLogin') do
-			client = RubyTCC::REST::Client.new(:username => USERNAME, :password => PASSWORD, :proxy => 'http://127.0.0.1:8080')
+			client = CLIENT
 			client.authenticate_user_login
 			client
 		end
@@ -17,8 +17,8 @@ describe RubyTCC::REST::GetShortLocationInfo, :vcr => vcr_options do
 		expect(subject.get_short_location_info( { :sessionID => subject.session_id } )).to_not be_nil
 	end
 	
-	describe '.get_volatile_thermostat_data' do
-		it 'should return a get volatile thermostat data result', :vcr => vcr_options  do 
+	describe '.get_short_location_info' do
+		it 'should return a get short location info result', :vcr => vcr_options  do 
 			expect(subject.get_short_location_info( { :sessionID => subject.session_id } )).to be_an_instance_of(RubyTCC::GetShortLocationInfoResult)
 		end
     end

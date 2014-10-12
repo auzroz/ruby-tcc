@@ -7,7 +7,7 @@ describe RubyTCC::REST::GetThermostatUI, :vcr => vcr_options do
 	
 	subject {
 		VCR.use_cassette('AuthenticateUserLogin') do
-			client = RubyTCC::REST::Client.new(:username => USERNAME, :password => PASSWORD, :proxy => 'http://127.0.0.1:8080')
+			client = CLIENT
 			client.authenticate_user_login
 			client
 		end
@@ -18,7 +18,7 @@ describe RubyTCC::REST::GetThermostatUI, :vcr => vcr_options do
 	end
 	
 	describe '.get_thermostat_ui' do
-		it 'should return a get volatile thermostat data result', :vcr => vcr_options  do 
+		it 'should return a get thermostat ui result', :vcr => vcr_options  do 
 			expect(subject.get_thermostat_ui( { :thermostatID => THERMOSTAT_ID } )).to be_an_instance_of(RubyTCC::GetThermostatUIResult)
 		end
     end
