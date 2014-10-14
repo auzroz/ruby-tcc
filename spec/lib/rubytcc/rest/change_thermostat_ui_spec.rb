@@ -23,11 +23,9 @@ thermostat_options = {
 describe RubyTCC::REST::ChangeThermostatUI, :vcr => vcr_options do
 	
 	subject {
-		VCR.use_cassette('AuthenticateUserLogin', :record => :new_episodes, :re_record_interval => 300) do
-			client = CLIENT
-			client.authenticate_user_login
-			client
-		end
+		client = CLIENT
+		client.authenticate_user_login
+		client
 	}
 
 	it 'should be successful'  do

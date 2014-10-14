@@ -6,11 +6,9 @@ vcr_options = { :cassette_name => "KeepAlive", :record => :new_episodes, :re_rec
 describe RubyTCC::REST::KeepAlive, :vcr => vcr_options do
 	
 	subject {
-		VCR.use_cassette('AuthenticateUserLogin', :record => :new_episodes, :re_record_interval => 300) do
-			client = CLIENT
-			client.authenticate_user_login
-			client
-		end
+		client = CLIENT
+		client.authenticate_user_login
+		client
 	}
 	it 'should be successful' do
 		expect(subject.keep_alive( { :sessionID => subject.session_id } ).result ).to eq "Success"

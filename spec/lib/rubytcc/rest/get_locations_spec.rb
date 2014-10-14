@@ -6,11 +6,9 @@ vcr_options = { :cassette_name => "GetLocations", :record => :new_episodes, :re_
 describe RubyTCC::REST::GetLocations, :vcr => vcr_options do
 
 	subject {
-		VCR.use_cassette('AuthenticateUserLogin', :record => :new_episodes, :re_record_interval => 300) do
-			client = CLIENT
-			client.authenticate_user_login
-			client
-		end
+		client = CLIENT
+		client.authenticate_user_login
+		client
 	}
 
 
