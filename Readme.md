@@ -53,16 +53,44 @@ client.get_locations
 * KeepAlive
 * LogOff
 
-## Currently Unsupported APIs
+## APIs In Progress
+* CancelScheduleChanges
+* ChangeSchedule
+* SubmitScheduleChanges
+
+## APIs Currently Unable to Test 
+
+Based on the Honeywell 7-Day Wifi Thermostat (RTH6580WF1001/W), the following APIs are not available to test. Any pull requests that can verify the function would be appreciated.
+
 * AcceptInvitation
-* CreateAccount
+* ChangeThermostatHumidification
 * DeclineInvitation
+* DismissSiteAlert
+* DismissThermostatAlert
+* DismissCommunicationAlert
+* EditDealerInformation
+* Edit PreferredDealerInformation
+* EmailDealer
 * GetDREvent
+* GetDealerInformation
 * GetPendingInvitations
 * HideDREvent
 * OptOutDREvent
-* ResendAccountActivationEmail
+* RequestDealerInvitation
+* WiringToolGetThermostats
+* WiringToolGetWireMapWithAnswer
 
+## APIs That Are Outside of Scope
+
+These functions are best left to the official app and website.
+
+* CreateAccount
+* GetSecurityQuestions
+* RegisterGateway
+* ResendAccountActivationEmail
+* ResetPassword
+* UnregisterGateway
+* UpdateLocationLevelOfAccess
 
 ## Contributing
 
