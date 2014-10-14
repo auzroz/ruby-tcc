@@ -4,6 +4,7 @@ module RubyTCC
   class GetUserAddressInfoResult
     include XML::Mapping
 
-    object_node :user_address_info, "UserAddressInfo", :class => RubyTCC::UserAddressInfo
+    	text_node :result, "Result"
+    	object_node :user_address_info, "UserAddressInfo", :class => RubyTCC::UserAddressInfo
 	end
 end

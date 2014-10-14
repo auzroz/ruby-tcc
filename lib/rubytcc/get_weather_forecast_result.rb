@@ -4,6 +4,7 @@ module RubyTCC
   class GetWeatherForecastResult
     include XML::Mapping
 
-    array_node :forecast, "Forecast", "ForecastDayInfo", :class => RubyTCC::ForecastDayInfo
+    	text_node :result, "Result"
+    	array_node :forecast, "Forecast", "ForecastDayInfo", :class => RubyTCC::ForecastDayInfo
 	end
 end

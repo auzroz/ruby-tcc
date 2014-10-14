@@ -43,6 +43,7 @@ client.get_locations
 * GetLocations
 * GetSchedule
 * GetShortLocationInfo
+* GetSystemGeoInfo
 * GetThermostatUI
 * GetVolatileThermostatData
 * GetWeatherForecast

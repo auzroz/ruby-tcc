@@ -2,6 +2,7 @@ module RubyTCC
   class ChangeThermostatUIResult
     include XML::Mapping
 
-    numeric_node :comm_task_id, "CommTaskID"
+    	text_node :result, "Result"
+    	numeric_node :comm_task_id, "CommTaskID"
 	end
 end

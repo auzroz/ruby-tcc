@@ -1,37 +1,30 @@
 require 'rubytcc'
 require 'spec_helper'
 
-vcr_options = { :cassette_name => "GetLocations", :record => :new_episodes, :re_record_interval => 5 * 60 }
+vcr_options = { :cassette_name => "GetLocations", :record => :new_episodes, :re_record_interval => 300 }
 
-describe RubyTCC::REST::GetLocations do
+describe RubyTCC::REST::GetLocations, :vcr => vcr_options do
 
 	subject {
-		VCR.use_cassette('AuthenticateUserLogin') do
+		VCR.use_cassette('AuthenticateUserLogin', :record => :new_episodes, :re_record_interval => 300) do
 			client = CLIENT
 			client.authenticate_user_login
 			client
 		end
 	}
 
-	describe 'credentials', :vcr => vcr_options do
-		it 'should validate and use correct credentials' do
-			expect(subject.session_id?).to be true
-		end
+
+	it 'should be successful' do
+		expect(subject.get_locations.result ).to eq "Success"
 	end
 
-	it 'should be an instance of an object', :vcr => vcr_options  do
+	it 'should be an instance of an object' do
 			expect(subject.get_locations).to_not be_nil
 	end
 	
 	describe '.get_locations' do
-		it 'should return location info', :vcr => vcr_options  do 
+		it 'should return location info' do 
 			expect(subject.get_locations).to be_an_instance_of(RubyTCC::GetLocationsResult)
 		end
-
-	    context 'when valid credentials are provided' do
-	      it 'should provide location info', :vcr => vcr_options  do
-	        expect(subject.get_locations.locations.first).to be_an_instance_of(RubyTCC::LocationInfo)
-	      end
-	    end
     end
 end
