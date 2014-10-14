@@ -13,6 +13,7 @@ require 'rubytcc/rest/get_user_address_info'
 require 'rubytcc/rest/get_volatile_thermostat_data'
 require 'rubytcc/rest/get_weather_forecast'
 require 'rubytcc/rest/keep_alive'
+require 'rubytcc/rest/log_off'
 
 module RubyTCC
 	module REST
@@ -32,6 +33,7 @@ module RubyTCC
 			include RubyTCC::REST::GetVolatileThermostatData
 			include RubyTCC::REST::GetWeatherForecast
 			include RubyTCC::REST::KeepAlive
+			include RubyTCC::REST::LogOff
 		end
 	end
 end

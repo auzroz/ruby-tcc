@@ -48,6 +48,7 @@ client.get_locations
 * GetVolatileThermostatData
 * GetWeatherForecast
 * KeepAlive
+* LogOff
 
 ## Currently Unsupported APIs
 * AcceptInvitation
