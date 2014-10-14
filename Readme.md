@@ -60,7 +60,7 @@ client.get_locations
 
 ## APIs Currently Unable to Test 
 
-Based on the Honeywell 7-Day Wifi Thermostat (RTH6580WF1001/W), the following APIs are not available to test. Any pull requests that can verify the function would be appreciated.
+Based on the [Honeywell 7-Day Wifi Thermostat (RTH6580WF1001/W)](http://smile.amazon.com/gp/product/B00A97FIG0/ref=oh_details_o00_s00_i00?ie=UTF8&psc=1), the following APIs are not available to test. Any pull requests that can verify the function would be appreciated.
 
 * AcceptInvitation
 * ChangeThermostatHumidification
