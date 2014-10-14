@@ -44,6 +44,9 @@ client.get_locations
 * GetSchedule
 * GetShortLocationInfo
 * GetSystemGeoInfo
+* GetThermostat
+* GetThermostatFan
+* GetThermostatHumidification
 * GetThermostatUI
 * GetVolatileThermostatData
 * GetWeatherForecast
@@ -54,7 +57,10 @@ client.get_locations
 * AcceptInvitation
 * CreateAccount
 * DeclineInvitation
+* GetDREvent
 * GetPendingInvitations
+* HideDREvent
+* OptOutDREvent
 * ResendAccountActivationEmail
 
 

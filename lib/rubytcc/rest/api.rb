@@ -8,6 +8,10 @@ require 'rubytcc/rest/get_locations'
 require 'rubytcc/rest/get_schedule'
 require 'rubytcc/rest/get_short_location_info'
 require 'rubytcc/rest/get_system_geo_info'
+require 'rubytcc/rest/get_thermostat'
+require 'rubytcc/rest/get_thermostat_fan'
+
+require 'rubytcc/rest/get_thermostat_humidification'
 require 'rubytcc/rest/get_thermostat_ui'
 require 'rubytcc/rest/get_user_address_info'
 require 'rubytcc/rest/get_volatile_thermostat_data'
@@ -28,6 +32,9 @@ module RubyTCC
 			include RubyTCC::REST::GetSchedule
 			include RubyTCC::REST::GetShortLocationInfo
 			include RubyTCC::REST::GetSystemGeoInfo
+			include RubyTCC::REST::GetThermostat
+			include RubyTCC::REST::GetThermostatFan
+			include RubyTCC::REST::GetThermostatHumidification
 			include RubyTCC::REST::GetThermostatUI
 			include RubyTCC::REST::GetUserAddressInfo
 			include RubyTCC::REST::GetVolatileThermostatData
