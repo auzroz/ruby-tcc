@@ -11,4 +11,18 @@ describe RubyTCC::Helper do
 			expect(RubyTCC::Helper.to_period("17:00")).to eq 68
 		end
 	end
+
+	describe '#camelize' do
+		it 'should not be nil when valid'  do
+			expect(RubyTCC::Helper.camelize("get_weather_forecast")).to_not be_nil
+		end
+
+		it 'should camlelize an underscored word'  do
+			expect(RubyTCC::Helper.camelize("get_weather_forecast")).to eq "GetWeatherForecast"
+		end
+
+		it 'should not camlelize a non-underscored word'  do
+			expect(RubyTCC::Helper.camelize("ChangeThermostatUIResult")).to eq "ChangeThermostatUIResult"
+		end
+	end
 end

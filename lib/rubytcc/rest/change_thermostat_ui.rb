@@ -4,11 +4,9 @@ module RubyTCC
 	module REST
 		module ChangeThermostatUI
 			def change_thermostat_ui(options = {})
+				module_name = Module.nesting[0].to_s.split("::").last
 				options[:sessionID] ||= self.session_id
-				request = RubyTCC::Request.new(self, :post, '/TotalConnectComfort/ws/MobileV2.asmx/ChangeThermostatUI', options)
-				response = post(request.path, request.options)
-				result = ChangeThermostatUIResult.load_from_xml(REXML::Document.new(response.body).root)
-				result
+				complete_post(module_name, module_name, options)
 			end
 		end
 	end

@@ -14,7 +14,8 @@ module RubyTCC
 			attr_accessor :session_id
 
 			URL_PREFIX = 'https://rs.alarmnet.com'
-			ENDPOINT = URL_PREFIX + '/TotalConnectComfort/ws/MobileV2.asmx'
+			URL_SUFFIX = '/TotalConnectComfort/ws/MobileV2.asmx/'
+			ENDPOINT = URL_PREFIX + URL_SUFFIX
 
 		    # @return [Hash]
 		    def connection_options
@@ -55,7 +56,14 @@ module RubyTCC
 	        # Perform an HTTP POST request
 	        def post(path, params = {})
 	        	headers = params.values.any? { |value| value.respond_to?(:to_io) } ? request_headers(:post, ENDPOINT + path, params, {}) : request_headers(:post, ENDPOINT + path, params)
-	        	request(:post, path, params, headers)
+	    		request(:post, path, params, headers)
+	        end
+
+	        # Perform a standardized post with module information
+	        def complete_post(method, result, options)
+	        	response = post(URL_SUFFIX + method, options)
+	        	result = Object.const_get("RubyTCC::" + result + "Result")
+	        	result.load_from_xml(REXML::Document.new(response.body).root)
 	        end
 
 		    # @return [Boolean]
