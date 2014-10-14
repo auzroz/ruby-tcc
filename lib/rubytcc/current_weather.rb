@@ -8,6 +8,6 @@ module RubyTCC
     numeric_node :temperature, "Temperature"
     text_node :temp_unit, "TempUnit"
     numeric_node :humidity, "Humidity"
-    text_node :phrase_key, "PhraseKey"
+    text_node :phrase_key, "PhraseKey", :default_value => ""
   end
 end

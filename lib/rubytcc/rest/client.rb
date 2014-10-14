@@ -63,7 +63,13 @@ module RubyTCC
 	        def complete_post(method, result, options)
 	        	response = post(URL_SUFFIX + method, options)
 	        	result = Object.const_get("RubyTCC::" + result + "Result")
-	        	result.load_from_xml(REXML::Document.new(response.body).root)
+	        	xml = REXML::Document.new(response.body).root
+	        	status = xml.elements["Result"].text
+	        	if status != "Success" then
+	        		raise RubyTCC::Error::ResultError.new(status)
+	        	else
+	        		result.load_from_xml(REXML::Document.new(response.body).root)
+	        	end
 	        end
 
 		    # @return [Boolean]

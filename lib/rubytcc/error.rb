@@ -1,5 +1,5 @@
 module RubyTCC
-  # Custom error class for rescuing from all Twitter errors
+  # Custom error class for rescuing from all RubyTCC errors
   class Error < StandardError
     # @return [Integer]
     attr_reader :code
@@ -53,5 +53,8 @@ module RubyTCC
 
     # Raised when RubyTCC returns the HTTP status code 408
     RequestTimeout = Class.new(ClientError)
+
+    # Raised when the result is not "Success"
+    ResultError = Class.new(self)
   end
 end

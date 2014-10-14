@@ -26,4 +26,11 @@ describe RubyTCC::REST::LogOff, :vcr => vcr_options do
 			expect(subject.log_off( { :sessionID => subject.session_id } )).to be_an_instance_of(RubyTCC::LogOffResult)
 		end
     end
+
+    it 'should throw an error when the session isn\'t valid' do
+    	subject.log_off
+    	expect { subject.keep_alive }.to raise_error { |error|
+    		expect(error).to be_a(RubyTCC::Error::ResultError)
+    	}
+	end
 end
