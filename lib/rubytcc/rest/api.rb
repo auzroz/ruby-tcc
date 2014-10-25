@@ -10,7 +10,6 @@ require 'rubytcc/rest/get_short_location_info'
 require 'rubytcc/rest/get_system_geo_info'
 require 'rubytcc/rest/get_thermostat'
 require 'rubytcc/rest/get_thermostat_fan'
-
 require 'rubytcc/rest/get_thermostat_humidification'
 require 'rubytcc/rest/get_thermostat_ui'
 require 'rubytcc/rest/get_user_address_info'
