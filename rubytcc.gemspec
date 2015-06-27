@@ -17,16 +17,16 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'faraday', '~> 0.9.0'
-  spec.add_runtime_dependency 'nori', '~> 2.4.0'
-  spec.add_runtime_dependency 'xml-mapping', '~> 0.10.0'
+  spec.add_runtime_dependency 'faraday', '>= 0.9.0'
+  spec.add_runtime_dependency 'nori', '>= 2.4.0'
+  spec.add_runtime_dependency 'xml-mapping', '>= 0.10.0'
 
-  spec.add_development_dependency 'rake', '~> 10.3.2'
-  spec.add_development_dependency 'rspec', '~> 3.1.0'
-  spec.add_development_dependency 'guard', '~> 2.6.0'
-  spec.add_development_dependency 'guard-rspec', '~> 4.3.0'
-  spec.add_development_dependency 'ruby_gntp', '~> 0.3.4'
-  spec.add_development_dependency 'growl', '~> 1.0.0'
-  spec.add_development_dependency 'vcr', '~> 2.9.3'
-  spec.add_development_dependency 'webmock', '~> 1.19.0'
+  spec.add_development_dependency 'rake', '>= 10.3.2'
+  spec.add_development_dependency 'rspec', '>= 3.1.0'
+  spec.add_development_dependency 'guard', '>= 2.6.0'
+  spec.add_development_dependency 'guard-rspec', '>= 4.3.0'
+  spec.add_development_dependency 'ruby_gntp', '>= 0.3.4'
+  spec.add_development_dependency 'growl', '>= 1.0.0'
+  spec.add_development_dependency 'vcr', '>= 2.9.3'
+  spec.add_development_dependency 'webmock', '>= 1.19.0'
 end
